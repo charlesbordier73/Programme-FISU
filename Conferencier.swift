@@ -13,5 +13,12 @@ import CoreData
 class Conferencier: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
+    class func createInManagedObjectContext(moc: NSManagedObjectContext, nom: String, metier: String) -> Conferencier {
+        let newItem = NSEntityDescription.insertNewObjectForEntityForName("Conferencier", inManagedObjectContext: moc) as! Conferencier
+        newItem.nom = nom
+        newItem.metier = metier
+        
+        return newItem
+    }
 
 }
