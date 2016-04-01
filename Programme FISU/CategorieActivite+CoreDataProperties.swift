@@ -1,8 +1,8 @@
 //
-//  Lieu+CoreDataProperties.swift
+//  CategorieActivite+CoreDataProperties.swift
 //  Programme FISU
 //
-//  Created by Charles on 15/03/2016.
+//  Created by arthur jamelot on 01/04/2016.
 //  Copyright © 2016 Charles. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,12 +12,9 @@
 import Foundation
 import CoreData
 
-extension Lieu {
+extension CategorieActivite {
 
-    @NSManaged var nomLieu: String?
-    @NSManaged var adresseLieu: String?
-    @NSManaged var heureDeb: NSDate?
-    @NSManaged var heureFin: NSDate?
-    @NSManaged var possede: TypeLieu?
+    @NSManaged var nomCategorie: String?
+    @NSManaged var activity: NSSet?
 
 }

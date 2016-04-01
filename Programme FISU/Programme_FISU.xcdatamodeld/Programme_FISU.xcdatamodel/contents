@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1605" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
     <entity name="Activite" representedClassName=".Activite" syncable="YES">
         <attribute name="choisie" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="nomActivite" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="categorie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategorieActivite" syncable="YES"/>
-        <relationship name="conferencier" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Conferencier" syncable="YES"/>
-        <relationship name="lieu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lieu" syncable="YES"/>
+        <relationship name="categorie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategorieActivite" inverseName="activity" inverseEntity="CategorieActivite" syncable="YES"/>
+        <relationship name="conferencier" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Conferencier" inverseName="activity" inverseEntity="Conferencier" syncable="YES"/>
+        <relationship name="lieu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lieu" inverseName="activite" inverseEntity="Lieu" syncable="YES"/>
     </entity>
     <entity name="CategorieActivite" representedClassName=".CategorieActivite" syncable="YES">
         <attribute name="nomCategorie" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="categorie" inverseEntity="Activite" syncable="YES"/>
     </entity>
     <entity name="Conferencier" representedClassName=".Conferencier" syncable="YES">
         <attribute name="metier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="conferencier" inverseEntity="Activite" syncable="YES"/>
     </entity>
     <entity name="Lieu" representedClassName=".Lieu" syncable="YES">
         <attribute name="adresseLieu" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="heureDeb" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="heureFin" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="nomLieu" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="possede" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeLieu" syncable="YES"/>
-    </entity>
-    <entity name="TypeLieu" representedClassName=".TypeLieu" syncable="YES">
-        <attribute name="nomType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeLieu" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="lieu" inverseEntity="Activite" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Activite" positionX="-110" positionY="-30" width="128" height="133"/>
-        <element name="Conferencier" positionX="-135" positionY="150" width="128" height="73"/>
-        <element name="CategorieActivite" positionX="-74" positionY="-162" width="128" height="58"/>
-        <element name="Lieu" positionX="133" positionY="-54" width="128" height="118"/>
-        <element name="TypeLieu" positionX="162" positionY="-180" width="128" height="58"/>
+        <element name="Activite" positionX="-101" positionY="-45" width="128" height="133"/>
+        <element name="CategorieActivite" positionX="-74" positionY="-162" width="128" height="73"/>
+        <element name="Conferencier" positionX="-135" positionY="150" width="128" height="88"/>
+        <element name="Lieu" positionX="133" positionY="-54" width="128" height="133"/>
     </elements>
 </model>

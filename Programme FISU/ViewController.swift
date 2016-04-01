@@ -12,31 +12,20 @@ import CoreData
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     //create empty array of Conferencier
-    var conferencierItems = [Conferencier]()
-
+    var conferencierItems = [Activite]()
 
     // Retreive the managedObjectContext from AppDelegate
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        // Use optional binding to confirm the the manageObjectContext
-
-            
-            //create some dummy data to work with
-            var items = [
-                ("Anakin Skywalker","Sith"),
-                ("Tintin","Reporter"),
-                ("Spyro","Dragon")
-            ]
-            
-            //loop through, creating items
-            for (itemNom, itemMetier) in items {
-                //create an individual item
-                Conferencier.createInManagedObjectContext(self.managedObjectContext, nom: itemNom, metier: itemMetier)
-            }
+        let firstStart : Bool? = NSUserDefaults.standardUserDefaults().objectForKey("firstStart") as? Bool
+        
+        if firstStart == nil || firstStart == true {
+            Instanciate.instance()
+        }
+        
         
         tableConferencier.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: "ConferencierCell")
         tableConferencier.dataSource = self
@@ -45,11 +34,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func fetchConferencier(){
-        let fetchRequest = NSFetchRequest(entityName: "Conferencier")
-        let sortDescriptor = NSSortDescriptor(key : "nom", ascending: true)
+        let fetchRequest = NSFetchRequest(entityName: "Activite")
+        let sortDescriptor = NSSortDescriptor(key : "date", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
             do {
-            let fetchResults = try self.managedObjectContext.executeFetchRequest(fetchRequest) as? [Conferencier]
+            let fetchResults = try self.managedObjectContext.executeFetchRequest(fetchRequest) as? [Activite]
             conferencierItems = fetchResults!
         } catch {
             
@@ -70,13 +59,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ConferencierCell")! as UITableViewCell
-        cell.textLabel?.text = self.conferencierItems[indexPath.row].nom
+        cell.textLabel?.text = self.conferencierItems[indexPath.row].nomActivite
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let conferencierItem = conferencierItems[indexPath.row]
-        print(conferencierItem.metier)
+        print(conferencierItem.conferencier)
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

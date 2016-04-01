@@ -2,7 +2,7 @@
 //  Activite+CoreDataProperties.swift
 //  Programme FISU
 //
-//  Created by Charles on 15/03/2016.
+//  Created by arthur jamelot on 01/04/2016.
 //  Copyright © 2016 Charles. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,11 +14,11 @@ import CoreData
 
 extension Activite {
 
-    @NSManaged var nomActivite: String?
-    @NSManaged var date: NSDate?
     @NSManaged var choisie: NSNumber?
-    @NSManaged var categorie: NSManagedObject?
+    @NSManaged var date: NSDate?
+    @NSManaged var nomActivite: String?
+    @NSManaged var categorie: CategorieActivite?
     @NSManaged var conferencier: NSSet?
-    @NSManaged var lieu: NSManagedObject?
+    @NSManaged var lieu: Lieu?
 
 }

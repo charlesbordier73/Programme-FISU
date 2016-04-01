@@ -1,8 +1,8 @@
 //
-//  TypeLieu+CoreDataProperties.swift
+//  Conferencier+CoreDataProperties.swift
 //  Programme FISU
 //
-//  Created by Charles on 15/03/2016.
+//  Created by arthur jamelot on 01/04/2016.
 //  Copyright © 2016 Charles. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,8 +12,10 @@
 import Foundation
 import CoreData
 
-extension TypeLieu {
+extension Conferencier {
 
-    @NSManaged var nomType: String?
+    @NSManaged var metier: String?
+    @NSManaged var nom: String?
+    @NSManaged var activity: NSSet?
 
 }
