@@ -11,8 +11,8 @@ import CoreData
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    //create empty array of Conferencier
-    var conferencierItems = [Activite]()
+    //create empty array of Activite
+    var activiteItems = [Activite]()
 
     // Retreive the managedObjectContext from AppDelegate
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
@@ -26,20 +26,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             Instanciate.instance()
         }
         
-        
-        tableConferencier.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: "ConferencierCell")
-        tableConferencier.dataSource = self
-        tableConferencier.delegate = self
-        fetchConferencier()
+        tableActivite.dataSource = self
+        tableActivite.delegate = self
+        fetchActivite()
     }
 
-    func fetchConferencier(){
+    func fetchActivite(){
         let fetchRequest = NSFetchRequest(entityName: "Activite")
         let sortDescriptor = NSSortDescriptor(key : "date", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
             do {
             let fetchResults = try self.managedObjectContext.executeFetchRequest(fetchRequest) as? [Activite]
-            conferencierItems = fetchResults!
+            guard let myFetchResult = fetchResults else {
+                return
+                }
+            activiteItems = myFetchResult
         } catch {
             
         }
@@ -51,22 +52,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: UITableViewDelegate
 
-    @IBOutlet weak var tableConferencier: UITableView!
+    @IBOutlet weak var tableActivite: UITableView!
+
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.conferencierItems.count
+        return self.activiteItems.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ConferencierCell")! as UITableViewCell
-        cell.textLabel?.text = self.conferencierItems[indexPath.row].nomActivite
+        let cell = tableView.dequeueReusableCellWithIdentifier("ActivityCellID") as! AccueilTableViewCell
+        cell.nomActivite.text = self.activiteItems[indexPath.row].nomActivite
+        cell.dateActivite.text = self.activiteItems[indexPath.row].sDate
+        cell.dateActivite.font = cell.dateActivite.font.fontWithSize(10)
+        cell.nomActivite.font = cell.nomActivite.font.fontWithSize(10)
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let conferencierItem = conferencierItems[indexPath.row]
-        print(conferencierItem.conferencier)
-    }
+   // func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+       // let activiteItem = activiteItems[indexPath.row]
+       // self.performSegueWithIdentifier("activiteSegue", sender: indexPath)
+   // }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
@@ -74,11 +79,41 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if(editingStyle == .Delete) {
-            let conferencierItemToDelete = conferencierItems[indexPath.row]
-            managedObjectContext.deleteObject(conferencierItemToDelete)
-            self.fetchConferencier()
-            tableConferencier.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            let activiteItemToDelete = activiteItems[indexPath.row]
+            managedObjectContext.deleteObject(activiteItemToDelete)
+            self.fetchActivite()
+            tableActivite.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         }
     }
+
+    
+    @IBOutlet weak var mytextField: UITextField!
+    
+    // MARK: TextField delegate
+    func textFieldShouldReturn(textField: UITextField) ->Bool{
+        self.mytextField.resignFirstResponder()
+        return true
+    }
+    
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "activiteSegue") {
+            let backItem = UIBarButtonItem()
+            backItem.title = "Retour"
+            navigationItem.backBarButtonItem = backItem
+            let destination = segue.destinationViewController as! ActiviteViewController
+            let index = self.tableActivite.indexPathForSelectedRow
+            destination.myActivite = activiteItems[(index?.row)!]
+        }
+    }
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
 }
+    
+    
+    
+
 

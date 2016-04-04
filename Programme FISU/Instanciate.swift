@@ -98,9 +98,7 @@ class Instanciate: NSObject {
             activite1.date = dateFormatter2.dateFromString("04/07/2016")
             activite1.nomActivite = "Ceremonie d'ouverture"
             
-            var currentSet1: Set<Conferencier> = Set<Conferencier>()
-            currentSet1.insert(conferencier1)
-            currentSet1.insert(conferencier4)
+            let currentSet1 = NSSet(array: [conferencier1,conferencier2, conferencier3, conferencier4])
             
             activite1.conferencier = currentSet1
             activite1.lieu = lieu2
@@ -112,8 +110,8 @@ class Instanciate: NSObject {
             activite2.date = dateFormatter2.dateFromString("05/07/2016")
             activite2.nomActivite = "Vivre sa vie avec le Karaté"
             
-            var currentSet2: Set<Conferencier> = Set<Conferencier>()
-            currentSet2.insert(conferencier2)
+            let currentSet2 = NSSet(array: [conferencier2])
+            
             
             activite2.conferencier = currentSet2
             activite2.lieu = lieu3

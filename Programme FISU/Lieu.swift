@@ -12,5 +12,27 @@ import CoreData
 
 class Lieu: NSManagedObject {
     
-
+    static var dateFormat: NSDateFormatter = {
+        let formatDate = NSDateFormatter()
+        formatDate.dateFormat = "HH:mm"
+        return formatDate
+    }()
+    
+    var sHeureDeb: String?{
+        get{
+            guard let monHeureDeb = self.heureDeb else{
+                return nil
+            }
+            return Lieu.dateFormat.stringFromDate(monHeureDeb)
+        }
+    }
+    
+    var sHeureFin: String?{
+        get{
+            guard let monHeureFin = self.heureFin else{
+                return nil
+            }
+            return Lieu.dateFormat.stringFromDate(monHeureFin)
+        }
+    }
 }
