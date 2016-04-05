@@ -2,7 +2,7 @@
 //  Lieu+CoreDataProperties.swift
 //  Programme FISU
 //
-//  Created by arthur jamelot on 01/04/2016.
+//  Created by arthur jamelot on 05/04/2016.
 //  Copyright © 2016 Charles. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,10 +15,10 @@ import CoreData
 extension Lieu {
 
     @NSManaged var adresseLieu: String?
-    @NSManaged var heureDeb: NSDate?
-    @NSManaged var heureFin: NSDate?
     @NSManaged var nomLieu: String?
     @NSManaged var typeLieu: String?
+    @NSManaged var heureDeb: NSDate?
+    @NSManaged var heureFin: NSDate?
     @NSManaged var activite: NSSet?
 
 }

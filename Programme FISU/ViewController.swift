@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func fetchActivite(){
         let fetchRequest = NSFetchRequest(entityName: "Activite")
-        let sortDescriptor = NSSortDescriptor(key : "date", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key : "dateDeb", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
             do {
             let fetchResults = try self.managedObjectContext.executeFetchRequest(fetchRequest) as? [Activite]
@@ -87,18 +87,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     
-    @IBOutlet weak var mytextField: UITextField!
-    
-    // MARK: TextField delegate
-    func textFieldShouldReturn(textField: UITextField) ->Bool{
-        self.mytextField.resignFirstResponder()
-        return true
-    }
-    
-    
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "activiteSegue") {
             let backItem = UIBarButtonItem()
@@ -109,8 +99,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             destination.myActivite = activiteItems[(index?.row)!]
         }
     }
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
 }
     
     

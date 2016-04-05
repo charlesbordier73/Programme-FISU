@@ -2,7 +2,8 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
     <entity name="Activite" representedClassName=".Activite" syncable="YES">
         <attribute name="choisie" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateDeb" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateFin" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="nomActivite" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="categorie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategorieActivite" inverseName="activity" inverseEntity="CategorieActivite" syncable="YES"/>
         <relationship name="conferencier" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Conferencier" inverseName="activity" inverseEntity="Conferencier" syncable="YES"/>
@@ -26,9 +27,9 @@
         <relationship name="activite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="lieu" inverseEntity="Activite" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Activite" positionX="-101" positionY="-45" width="128" height="133"/>
+        <element name="Activite" positionX="-101" positionY="-45" width="128" height="150"/>
         <element name="CategorieActivite" positionX="-74" positionY="-162" width="128" height="73"/>
         <element name="Conferencier" positionX="-135" positionY="150" width="128" height="88"/>
-        <element name="Lieu" positionX="133" positionY="-54" width="128" height="133"/>
+        <element name="Lieu" positionX="133" positionY="-54" width="128" height="135"/>
     </elements>
 </model>

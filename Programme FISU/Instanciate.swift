@@ -41,7 +41,7 @@ class Instanciate: NSObject {
             
             let lieu2: Lieu = Lieu(entity: lieuxEntity!, insertIntoManagedObjectContext: managedObjectContext)
             lieu2.adresseLieu = "14, Rue de l'Occitanie, Montpellier"
-            lieu2.heureDeb = dateFormatter.dateFromString("12:00")
+            lieu2.heureDeb = dateFormatter.dateFromString("10:00")
             lieu2.heureFin = dateFormatter.dateFromString("14:30")
             lieu2.nomLieu = "Amphi Dubonnet"
             lieu2.typeLieu = "Amphi"
@@ -54,6 +54,14 @@ class Instanciate: NSObject {
             lieu3.heureFin = dateFormatter.dateFromString("11:30")
             lieu3.nomLieu = "Gymnase du Bonsport"
             lieu3.typeLieu = "Gymnase"
+            
+            
+            let lieu4: Lieu = Lieu(entity: lieuxEntity!, insertIntoManagedObjectContext: managedObjectContext)
+            lieu4.adresseLieu = "31 Place Eugene Bataillon, Montpellier"
+            lieu4.heureDeb = dateFormatter.dateFromString("11:45")
+            lieu4.heureFin = dateFormatter.dateFromString("13:30")
+            lieu4.nomLieu = "Gymnase du Bonsport"
+            lieu4.typeLieu = "Gymnase"
             
      
             let categorie1: CategorieActivite = CategorieActivite(entity: categorieEntity!, insertIntoManagedObjectContext: managedObjectContext)
@@ -91,11 +99,13 @@ class Instanciate: NSObject {
         
     
             let dateFormatter2 = NSDateFormatter()
-            dateFormatter2.dateFormat = "dd/MM/yyyy"
+            dateFormatter2.dateFormat = "dd/MM/yyyy HH:mm"
 
             let activite1: Activite = Activite(entity: activiteEntity!, insertIntoManagedObjectContext: managedObjectContext)
-            activite1.choisie = 0
-            activite1.date = dateFormatter2.dateFromString("04/07/2016")
+            activite1.choisie = 1
+            activite1.dateDeb = dateFormatter2.dateFromString("04/07/2016 10:00")
+            activite1.dateFin = dateFormatter2.dateFromString("04/07/2016 11:00")
+
             activite1.nomActivite = "Ceremonie d'ouverture"
             
             let currentSet1 = NSSet(array: [conferencier1,conferencier2, conferencier3, conferencier4])
@@ -106,8 +116,9 @@ class Instanciate: NSObject {
             
             
             let activite2: Activite = Activite(entity: activiteEntity!, insertIntoManagedObjectContext: managedObjectContext)
-            activite2.choisie = 0
-            activite2.date = dateFormatter2.dateFromString("05/07/2016")
+            activite2.choisie = 1
+            activite2.dateDeb = dateFormatter2.dateFromString("05/07/2016 14:00")
+            activite2.dateFin = dateFormatter2.dateFromString("05/07/2016 15:00")
             activite2.nomActivite = "Vivre sa vie avec le Karaté"
             
             let currentSet2 = NSSet(array: [conferencier2])
@@ -115,8 +126,22 @@ class Instanciate: NSObject {
             
             activite2.conferencier = currentSet2
             activite2.lieu = lieu3
-            activite1.categorie = categorie2
+            activite2.categorie = categorie2
             
+            
+            let activite3: Activite = Activite(entity: activiteEntity!, insertIntoManagedObjectContext: managedObjectContext)
+            activite3.choisie = 1
+            activite3.dateDeb = dateFormatter2.dateFromString("05/07/2016 08:00")
+            activite3.dateFin = dateFormatter2.dateFromString("05/07/2016 10:00")
+            activite3.nomActivite = "Le tennis de table"
+            
+            let currentSet3 = NSSet(array: [conferencier3])
+            
+            
+            activite3.conferencier = currentSet3
+            activite3.lieu = lieu4
+            activite3.categorie = categorie1
+
         }
         
         
