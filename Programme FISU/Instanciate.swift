@@ -63,6 +63,19 @@ class Instanciate: NSObject {
             lieu4.nomLieu = "Gymnase du Bonsport"
             lieu4.typeLieu = "Gymnase"
             
+            let lieu5: Lieu = Lieu(entity: lieuxEntity!, insertIntoManagedObjectContext: managedObjectContext)
+            lieu5.adresseLieu = "4, Rue Foch, Montpellier"
+            lieu5.heureDeb = dateFormatter.dateFromString("08:45")
+            lieu5.heureFin = dateFormatter.dateFromString("18:30")
+            lieu5.nomLieu = "Les Trois Brasseurs"
+            lieu5.typeLieu = "Restaurant"
+
+            let lieu6: Lieu = Lieu(entity: lieuxEntity!, insertIntoManagedObjectContext: managedObjectContext)
+            lieu6.adresseLieu = "53, Avenue de l'an 2000"
+            lieu6.heureDeb = dateFormatter.dateFromString("17:45")
+            lieu6.heureFin = dateFormatter.dateFromString("00:30")
+            lieu6.nomLieu = "Le Petit Paumé"
+            lieu6.typeLieu = "Restaurant"
      
             let categorie1: CategorieActivite = CategorieActivite(entity: categorieEntity!, insertIntoManagedObjectContext: managedObjectContext)
             categorie1.nomCategorie = "Activite Sportive"

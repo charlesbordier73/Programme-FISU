@@ -53,10 +53,7 @@ class ActiviteViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let conferencier = conferenciers[indexPath.row]
-        print(conferencier.metier)
-    }
+
     
     
     // MARK: - Navigation

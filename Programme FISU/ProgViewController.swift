@@ -57,17 +57,37 @@ class ProgViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("progCell")! as! ProgTableViewCell
         cell.nomProg.text = choisies[indexPath.row].nomActivite
+        cell.heureDebProg.text = choisies[indexPath.row].sHeureDeb
+        cell.heureFinProg.text = choisies[indexPath.row].sHeureFin
+        cell.dateProg.text = choisies[indexPath.row].sDate
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
     }
-    */
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if(editingStyle == .Delete) {
+            let progItemRemove = choisies[indexPath.row]
+            progItemRemove.choisie = 1
+            self.fetchChoisies()
+            tableChoix.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+    }
+
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "activiteSegue") {
+            let backItem = UIBarButtonItem()
+            backItem.title = "Retour"
+            navigationItem.backBarButtonItem = backItem
+            let destination = segue.destinationViewController as! ActiviteViewController
+            let index = self.tableChoix.indexPathForSelectedRow
+            destination.myActivite = choisies[(index?.row)!]
+        }
+    }
 
 }

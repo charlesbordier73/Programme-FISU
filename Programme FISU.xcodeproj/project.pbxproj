@@ -17,6 +17,8 @@
 		84D2A7881C9800D500F81B92 /* Programme_FISUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2A7871C9800D500F81B92 /* Programme_FISUUITests.swift */; };
 		D310813F1CB280E9008462B9 /* AccueilTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D310813E1CB280E9008462B9 /* AccueilTableViewCell.swift */; };
 		D31081451CB29CF4008462B9 /* ActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31081441CB29CF4008462B9 /* ActiviteViewController.swift */; };
+		D3AAB4A21CB5178200195E4E /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAB4A11CB5178200195E4E /* RestaurantViewController.swift */; };
+		D3AAB4A41CB517B400195E4E /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAB4A31CB517B400195E4E /* RestaurantTableViewCell.swift */; };
 		D3B6DBBA1CB399B300FFD3A9 /* ConferencierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6DBB91CB399B300FFD3A9 /* ConferencierViewController.swift */; };
 		D3B6DBBC1CB3A26F00FFD3A9 /* ProgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6DBBB1CB3A26F00FFD3A9 /* ProgViewController.swift */; };
 		D3B6DBC31CB3A5C800FFD3A9 /* Lieu+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6DBBF1CB3A5C800FFD3A9 /* Lieu+CoreDataProperties.swift */; };
@@ -66,6 +68,8 @@
 		84D2A7891C9800D500F81B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D310813E1CB280E9008462B9 /* AccueilTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccueilTableViewCell.swift; sourceTree = "<group>"; };
 		D31081441CB29CF4008462B9 /* ActiviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiviteViewController.swift; path = ../ActiviteViewController.swift; sourceTree = "<group>"; };
+		D3AAB4A11CB5178200195E4E /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		D3AAB4A31CB517B400195E4E /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		D3B6DBB91CB399B300FFD3A9 /* ConferencierViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferencierViewController.swift; sourceTree = "<group>"; };
 		D3B6DBBB1CB3A26F00FFD3A9 /* ProgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgViewController.swift; sourceTree = "<group>"; };
 		D3B6DBBF1CB3A5C800FFD3A9 /* Lieu+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lieu+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				84D2A7661C9800D400F81B92 /* ViewController.swift */,
 				D3DE36271CAE6A44005579ED /* Instanciate.swift */,
 				84D2A7681C9800D400F81B92 /* Main.storyboard */,
+				D3AAB4A11CB5178200195E4E /* RestaurantViewController.swift */,
+				D3AAB4A31CB517B400195E4E /* RestaurantTableViewCell.swift */,
 				D3B6DBCB1CB3B41200FFD3A9 /* ProgTableViewCell.swift */,
 				D3B6DBC91CB3AEF300FFD3A9 /* LieuViewController.swift */,
 				D310813E1CB280E9008462B9 /* AccueilTableViewCell.swift */,
@@ -313,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AAB4A41CB517B400195E4E /* RestaurantTableViewCell.swift in Sources */,
 				D3F829741CAE9E5100A53786 /* Conferencier+CoreDataProperties.swift in Sources */,
 				D3B6DBC31CB3A5C800FFD3A9 /* Lieu+CoreDataProperties.swift in Sources */,
 				D3B6DBC81CB3AB5800FFD3A9 /* Activite.swift in Sources */,
@@ -324,6 +331,7 @@
 				D31081451CB29CF4008462B9 /* ActiviteViewController.swift in Sources */,
 				D3B6DBBA1CB399B300FFD3A9 /* ConferencierViewController.swift in Sources */,
 				D3F829751CAE9E5100A53786 /* Conferencier.swift in Sources */,
+				D3AAB4A21CB5178200195E4E /* RestaurantViewController.swift in Sources */,
 				D3F8296F1CAE9E5100A53786 /* CategorieActivite.swift in Sources */,
 				D310813F1CB280E9008462B9 /* AccueilTableViewCell.swift in Sources */,
 				D3B6DBBC1CB3A26F00FFD3A9 /* ProgViewController.swift in Sources */,

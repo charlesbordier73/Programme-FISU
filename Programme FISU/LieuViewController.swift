@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class LieuViewController: UIViewController {
 
@@ -14,8 +15,10 @@ class LieuViewController: UIViewController {
     @IBOutlet weak var heureDebLieu: UILabel!
     @IBOutlet weak var heureFinLieu: UILabel!
     @IBOutlet weak var adresseLieu: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
     
     var monLieu: Lieu?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,7 @@ class LieuViewController: UIViewController {
         heureFinLieu.text = monLieu?.sHeureFin
         adresseLieu.text = monLieu?.adresseLieu
         // Do any additional setup after loading the view.
+        centerMapOnLocation(initialLocation)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,15 +35,15 @@ class LieuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: Map
+    
+    let initialLocation = CLLocation(latitude: 43.604621, longitude: 3.881323)
+    let regionRadius: CLLocationDistance = 1000
+    
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius*2.0, regionRadius*2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
-    */
 
 }

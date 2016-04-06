@@ -21,10 +21,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         let firstStart : Bool? = NSUserDefaults.standardUserDefaults().objectForKey("firstStart") as? Bool
-        
         if firstStart == nil || firstStart == true {
             Instanciate.instance()
         }
+        
+        
         
         tableActivite.dataSource = self
         tableActivite.delegate = self
@@ -68,23 +69,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-   // func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-       // let activiteItem = activiteItems[indexPath.row]
-       // self.performSegueWithIdentifier("activiteSegue", sender: indexPath)
-   // }
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let select = UITableViewRowAction(style: .Normal, title: "Select",  handler: {action, index in
+            let addToProg = self.activiteItems[indexPath.row]
+            addToProg.choisie = 0
+            try! self.managedObjectContext.save()
+            self.tableActivite.reloadData()
+        })
+        select.backgroundColor = UIColor.blueColor()
+        return [select]
+    }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if(editingStyle == .Delete) {
-            let activiteItemToDelete = activiteItems[indexPath.row]
-            managedObjectContext.deleteObject(activiteItemToDelete)
-            self.fetchActivite()
-            tableActivite.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-        }
     }
+
 
     
     // MARK: - Navigation
