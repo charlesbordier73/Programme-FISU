@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -64,8 +65,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier("ActivityCellID") as! AccueilTableViewCell
         cell.nomActivite.text = self.activiteItems[indexPath.row].nomActivite
         cell.dateActivite.text = self.activiteItems[indexPath.row].sDate
-        cell.dateActivite.font = cell.dateActivite.font.fontWithSize(10)
-        cell.nomActivite.font = cell.nomActivite.font.fontWithSize(10)
         return cell
     }
     

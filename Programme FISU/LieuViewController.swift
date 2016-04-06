@@ -18,6 +18,7 @@ class LieuViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     
     var monLieu: Lieu?
+    var geocoder = CLGeocoder()
     
     
     override func viewDidLoad() {
@@ -27,7 +28,12 @@ class LieuViewController: UIViewController {
         heureFinLieu.text = monLieu?.sHeureFin
         adresseLieu.text = monLieu?.adresseLieu
         // Do any additional setup after loading the view.
-        centerMapOnLocation(initialLocation)
+        
+        geocoder.geocodeAddressString((monLieu?.adresseLieu)!, completionHandler: {placemarks, error in
+            let placemark = placemarks![0] as CLPlacemark
+            self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
+            self.centerMapOnLocation(placemark.location!)
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,11 +44,10 @@ class LieuViewController: UIViewController {
     
     // MARK: Map
     
-    let initialLocation = CLLocation(latitude: 43.604621, longitude: 3.881323)
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 1500
     
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius*2.0, regionRadius*2.0)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
 

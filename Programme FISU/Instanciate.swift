@@ -31,7 +31,7 @@ class Instanciate: NSObject {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "HH:mm"
             let lieu1: Lieu = Lieu(entity: lieuxEntity!, insertIntoManagedObjectContext: managedObjectContext)
-            lieu1.adresseLieu = "50, Chemin des Vignobles, Aix les Bains"
+            lieu1.adresseLieu = "100 Avenue Charles Flahault, Montpellier"
             lieu1.heureDeb = dateFormatter.dateFromString("08:00")
             lieu1.heureFin = dateFormatter.dateFromString("17:30")
             lieu1.nomLieu = "La Bonne Fourchette"
@@ -40,7 +40,7 @@ class Instanciate: NSObject {
             
             
             let lieu2: Lieu = Lieu(entity: lieuxEntity!, insertIntoManagedObjectContext: managedObjectContext)
-            lieu2.adresseLieu = "14, Rue de l'Occitanie, Montpellier"
+            lieu2.adresseLieu = "14 Avenue d'Occitanie, Montpellier"
             lieu2.heureDeb = dateFormatter.dateFromString("10:00")
             lieu2.heureFin = dateFormatter.dateFromString("14:30")
             lieu2.nomLieu = "Amphi Dubonnet"
@@ -64,14 +64,14 @@ class Instanciate: NSObject {
             lieu4.typeLieu = "Gymnase"
             
             let lieu5: Lieu = Lieu(entity: lieuxEntity!, insertIntoManagedObjectContext: managedObjectContext)
-            lieu5.adresseLieu = "4, Rue Foch, Montpellier"
+            lieu5.adresseLieu = "4 Avenue Foch, Montpellier"
             lieu5.heureDeb = dateFormatter.dateFromString("08:45")
             lieu5.heureFin = dateFormatter.dateFromString("18:30")
             lieu5.nomLieu = "Les Trois Brasseurs"
             lieu5.typeLieu = "Restaurant"
 
             let lieu6: Lieu = Lieu(entity: lieuxEntity!, insertIntoManagedObjectContext: managedObjectContext)
-            lieu6.adresseLieu = "53, Avenue de l'an 2000"
+            lieu6.adresseLieu = "2, Rue de l'Abbe de l'Epee, Montpellier"
             lieu6.heureDeb = dateFormatter.dateFromString("17:45")
             lieu6.heureFin = dateFormatter.dateFromString("00:30")
             lieu6.nomLieu = "Le Petit Paumé"
