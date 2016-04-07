@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreData
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
 
     @IBOutlet weak var mapView: MKMapView!
@@ -18,9 +18,18 @@ class MapViewController: UIViewController {
     var lieux = [Lieu]()
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     let geocoder = CLGeocoder()
+    let locationManager: CLLocationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        let authstate = CLLocationManager.authorizationStatus()
+        if (authstate == CLAuthorizationStatus.NotDetermined) {
+            locationManager.requestAlwaysAuthorization()
+        }
+        
         centerMapOnGare()
         fetchLieu()
         

@@ -64,7 +64,7 @@ class Instanciate: NSObject {
             lieu4.typeLieu = "Gymnase"
             
             let lieu5: Lieu = Lieu(entity: lieuxEntity!, insertIntoManagedObjectContext: managedObjectContext)
-            lieu5.adresseLieu = "4 Avenue Foch, Montpellier"
+            lieu5.adresseLieu = "4 Rue Foch, Montpellier"
             lieu5.heureDeb = dateFormatter.dateFromString("08:45")
             lieu5.heureFin = dateFormatter.dateFromString("18:30")
             lieu5.nomLieu = "Les Trois Brasseurs"

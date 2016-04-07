@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class LieuViewController: UIViewController {
+class LieuViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var navLieu: UINavigationItem!
     @IBOutlet weak var heureDebLieu: UILabel!
@@ -19,10 +19,12 @@ class LieuViewController: UIViewController {
     
     var monLieu: Lieu?
     var geocoder = CLGeocoder()
-    
+    let locationManager: CLLocationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         navLieu.title = monLieu?.nomLieu
         heureDebLieu.text = monLieu?.sHeureDeb
         heureFinLieu.text = monLieu?.sHeureFin
@@ -34,6 +36,14 @@ class LieuViewController: UIViewController {
             self.mapView.addAnnotation(MKPlacemark(placemark: placemark))
             self.centerMapOnLocation(placemark.location!)
         })
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        let authstate = CLLocationManager.authorizationStatus()
+        if (authstate == CLAuthorizationStatus.NotDetermined) {
+            locationManager.requestAlwaysAuthorization()
+
+        }
     }
 
     override func didReceiveMemoryWarning() {
