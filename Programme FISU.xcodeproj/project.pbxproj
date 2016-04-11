@@ -17,15 +17,6 @@
 		84D2A7881C9800D500F81B92 /* Programme_FISUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2A7871C9800D500F81B92 /* Programme_FISUUITests.swift */; };
 		D310813F1CB280E9008462B9 /* AccueilTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D310813E1CB280E9008462B9 /* AccueilTableViewCell.swift */; };
 		D31081451CB29CF4008462B9 /* ActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31081441CB29CF4008462B9 /* ActiviteViewController.swift */; };
-		D34CE1441CB6593400E84639 /* map@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D34CE1411CB6593400E84639 /* map@3x.png */; };
-		D34CE1451CB6593400E84639 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D34CE1421CB6593400E84639 /* map@2x.png */; };
-		D34CE1461CB6593400E84639 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = D34CE1431CB6593400E84639 /* map.png */; };
-		D34CE15A1CB659A500E84639 /* restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = D34CE1571CB659A500E84639 /* restaurant.png */; };
-		D34CE15B1CB659A500E84639 /* restaurant@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D34CE1581CB659A500E84639 /* restaurant@2x.png */; };
-		D34CE15C1CB659A500E84639 /* restaurant@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D34CE1591CB659A500E84639 /* restaurant@3x.png */; };
-		D34CE16A1CB65B5900E84639 /* accueil.png in Resources */ = {isa = PBXBuildFile; fileRef = D34CE1671CB65B5900E84639 /* accueil.png */; };
-		D34CE16B1CB65B5900E84639 /* accueil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D34CE1681CB65B5900E84639 /* accueil@2x.png */; };
-		D34CE16C1CB65B5900E84639 /* accueil@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D34CE1691CB65B5900E84639 /* accueil@3x.png */; };
 		D3AAB4A21CB5178200195E4E /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAB4A11CB5178200195E4E /* RestaurantViewController.swift */; };
 		D3AAB4A41CB517B400195E4E /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAB4A31CB517B400195E4E /* RestaurantTableViewCell.swift */; };
 		D3AAB4A61CB53A6900195E4E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAB4A51CB53A6900195E4E /* MapViewController.swift */; };
@@ -39,6 +30,15 @@
 		D3B6DBCA1CB3AEF300FFD3A9 /* LieuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6DBC91CB3AEF300FFD3A9 /* LieuViewController.swift */; };
 		D3B6DBCC1CB3B41200FFD3A9 /* ProgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6DBCB1CB3B41200FFD3A9 /* ProgTableViewCell.swift */; };
 		D3DE36281CAE6A44005579ED /* Instanciate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DE36271CAE6A44005579ED /* Instanciate.swift */; };
+		D3F77E211CBBEA9600DD485C /* restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F77E1E1CBBEA9600DD485C /* restaurant.png */; };
+		D3F77E221CBBEA9600DD485C /* restaurant@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F77E1F1CBBEA9600DD485C /* restaurant@2x.png */; };
+		D3F77E231CBBEA9600DD485C /* restaurant@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F77E201CBBEA9600DD485C /* restaurant@3x.png */; };
+		D3F77E271CBBEAA000DD485C /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F77E241CBBEAA000DD485C /* map.png */; };
+		D3F77E281CBBEAA000DD485C /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F77E251CBBEAA000DD485C /* map@2x.png */; };
+		D3F77E291CBBEAA000DD485C /* map@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F77E261CBBEAA000DD485C /* map@3x.png */; };
+		D3F77E2D1CBBEAA800DD485C /* accueil.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F77E2A1CBBEAA800DD485C /* accueil.png */; };
+		D3F77E2E1CBBEAA800DD485C /* accueil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F77E2B1CBBEAA800DD485C /* accueil@2x.png */; };
+		D3F77E2F1CBBEAA800DD485C /* accueil@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F77E2C1CBBEAA800DD485C /* accueil@3x.png */; };
 		D3F8296E1CAE9E5100A53786 /* CategorieActivite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F829661CAE9E5100A53786 /* CategorieActivite+CoreDataProperties.swift */; };
 		D3F8296F1CAE9E5100A53786 /* CategorieActivite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F829671CAE9E5100A53786 /* CategorieActivite.swift */; };
 		D3F829741CAE9E5100A53786 /* Conferencier+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F8296C1CAE9E5100A53786 /* Conferencier+CoreDataProperties.swift */; };
@@ -79,15 +79,6 @@
 		84D2A7891C9800D500F81B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D310813E1CB280E9008462B9 /* AccueilTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccueilTableViewCell.swift; sourceTree = "<group>"; };
 		D31081441CB29CF4008462B9 /* ActiviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiviteViewController.swift; path = ../ActiviteViewController.swift; sourceTree = "<group>"; };
-		D34CE1411CB6593400E84639 /* map@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map@3x.png"; path = "../map@3x.png"; sourceTree = "<group>"; };
-		D34CE1421CB6593400E84639 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map@2x.png"; path = "../map@2x.png"; sourceTree = "<group>"; };
-		D34CE1431CB6593400E84639 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = ../map.png; sourceTree = "<group>"; };
-		D34CE1571CB659A500E84639 /* restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = restaurant.png; path = ../restaurant.png; sourceTree = "<group>"; };
-		D34CE1581CB659A500E84639 /* restaurant@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "restaurant@2x.png"; path = "../restaurant@2x.png"; sourceTree = "<group>"; };
-		D34CE1591CB659A500E84639 /* restaurant@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "restaurant@3x.png"; path = "../restaurant@3x.png"; sourceTree = "<group>"; };
-		D34CE1671CB65B5900E84639 /* accueil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accueil.png; path = ../../.Trash/accueil.png; sourceTree = "<group>"; };
-		D34CE1681CB65B5900E84639 /* accueil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "accueil@2x.png"; path = "../../.Trash/accueil@2x.png"; sourceTree = "<group>"; };
-		D34CE1691CB65B5900E84639 /* accueil@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "accueil@3x.png"; path = "../../.Trash/accueil@3x.png"; sourceTree = "<group>"; };
 		D3AAB4A11CB5178200195E4E /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		D3AAB4A31CB517B400195E4E /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		D3AAB4A51CB53A6900195E4E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +92,15 @@
 		D3B6DBC91CB3AEF300FFD3A9 /* LieuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LieuViewController.swift; sourceTree = "<group>"; };
 		D3B6DBCB1CB3B41200FFD3A9 /* ProgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgTableViewCell.swift; sourceTree = "<group>"; };
 		D3DE36271CAE6A44005579ED /* Instanciate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instanciate.swift; sourceTree = "<group>"; };
+		D3F77E1E1CBBEA9600DD485C /* restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = restaurant.png; path = Ressources/restaurant.png; sourceTree = "<group>"; };
+		D3F77E1F1CBBEA9600DD485C /* restaurant@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "restaurant@2x.png"; path = "Ressources/restaurant@2x.png"; sourceTree = "<group>"; };
+		D3F77E201CBBEA9600DD485C /* restaurant@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "restaurant@3x.png"; path = "Ressources/restaurant@3x.png"; sourceTree = "<group>"; };
+		D3F77E241CBBEAA000DD485C /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = Ressources/map.png; sourceTree = "<group>"; };
+		D3F77E251CBBEAA000DD485C /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map@2x.png"; path = "Ressources/map@2x.png"; sourceTree = "<group>"; };
+		D3F77E261CBBEAA000DD485C /* map@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "map@3x.png"; path = "Ressources/map@3x.png"; sourceTree = "<group>"; };
+		D3F77E2A1CBBEAA800DD485C /* accueil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accueil.png; path = Ressources/accueil.png; sourceTree = "<group>"; };
+		D3F77E2B1CBBEAA800DD485C /* accueil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "accueil@2x.png"; path = "Ressources/accueil@2x.png"; sourceTree = "<group>"; };
+		D3F77E2C1CBBEAA800DD485C /* accueil@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "accueil@3x.png"; path = "Ressources/accueil@3x.png"; sourceTree = "<group>"; };
 		D3F829661CAE9E5100A53786 /* CategorieActivite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategorieActivite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D3F829671CAE9E5100A53786 /* CategorieActivite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorieActivite.swift; sourceTree = "<group>"; };
 		D3F8296C1CAE9E5100A53786 /* Conferencier+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Conferencier+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -199,32 +199,32 @@
 		D34CE1471CB6593D00E84639 /* icoMap */ = {
 			isa = PBXGroup;
 			children = (
-				D34CE1411CB6593400E84639 /* map@3x.png */,
-				D34CE1421CB6593400E84639 /* map@2x.png */,
-				D34CE1431CB6593400E84639 /* map.png */,
+				D3F77E241CBBEAA000DD485C /* map.png */,
+				D3F77E251CBBEAA000DD485C /* map@2x.png */,
+				D3F77E261CBBEAA000DD485C /* map@3x.png */,
 			);
 			name = icoMap;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		D34CE15D1CB659AB00E84639 /* icoRestaurant */ = {
 			isa = PBXGroup;
 			children = (
-				D34CE1571CB659A500E84639 /* restaurant.png */,
-				D34CE1581CB659A500E84639 /* restaurant@2x.png */,
-				D34CE1591CB659A500E84639 /* restaurant@3x.png */,
+				D3F77E1E1CBBEA9600DD485C /* restaurant.png */,
+				D3F77E1F1CBBEA9600DD485C /* restaurant@2x.png */,
+				D3F77E201CBBEA9600DD485C /* restaurant@3x.png */,
 			);
 			name = icoRestaurant;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		D34CE16D1CB65B6000E84639 /* icoAccueil */ = {
 			isa = PBXGroup;
 			children = (
-				D34CE1671CB65B5900E84639 /* accueil.png */,
-				D34CE1681CB65B5900E84639 /* accueil@2x.png */,
-				D34CE1691CB65B5900E84639 /* accueil@3x.png */,
+				D3F77E2A1CBBEAA800DD485C /* accueil.png */,
+				D3F77E2B1CBBEAA800DD485C /* accueil@2x.png */,
+				D3F77E2C1CBBEAA800DD485C /* accueil@3x.png */,
 			);
 			name = icoAccueil;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		D3AAB4AB1CB55BA800195E4E /* Ressources */ = {
 			isa = PBXGroup;
@@ -357,19 +357,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D34CE16A1CB65B5900E84639 /* accueil.png in Resources */,
+				D3F77E2D1CBBEAA800DD485C /* accueil.png in Resources */,
+				D3F77E271CBBEAA000DD485C /* map.png in Resources */,
+				D3F77E231CBBEA9600DD485C /* restaurant@3x.png in Resources */,
+				D3F77E211CBBEA9600DD485C /* restaurant.png in Resources */,
+				D3F77E221CBBEA9600DD485C /* restaurant@2x.png in Resources */,
 				84D2A7721C9800D400F81B92 /* LaunchScreen.storyboard in Resources */,
-				D34CE15A1CB659A500E84639 /* restaurant.png in Resources */,
-				D34CE1441CB6593400E84639 /* map@3x.png in Resources */,
+				D3F77E281CBBEAA000DD485C /* map@2x.png in Resources */,
+				D3F77E291CBBEAA000DD485C /* map@3x.png in Resources */,
+				D3F77E2F1CBBEAA800DD485C /* accueil@3x.png in Resources */,
 				84D2A76F1C9800D400F81B92 /* Assets.xcassets in Resources */,
+				D3F77E2E1CBBEAA800DD485C /* accueil@2x.png in Resources */,
 				D3AAB4AA1CB55B9A00195E4E /* FISU.jpg in Resources */,
-				D34CE1461CB6593400E84639 /* map.png in Resources */,
 				84D2A76A1C9800D400F81B92 /* Main.storyboard in Resources */,
-				D34CE16C1CB65B5900E84639 /* accueil@3x.png in Resources */,
-				D34CE15B1CB659A500E84639 /* restaurant@2x.png in Resources */,
-				D34CE16B1CB65B5900E84639 /* accueil@2x.png in Resources */,
-				D34CE1451CB6593400E84639 /* map@2x.png in Resources */,
-				D34CE15C1CB659A500E84639 /* restaurant@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
